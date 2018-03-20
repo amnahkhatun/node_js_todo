@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+<style>
+body{background-color: skyblue; font-family: cursive; color: white; padding: 30px}
+<h1{font-size: 48px; text-align: 2px; text-transform: uppercase; letter-spacing: normal;}
+<h2{font-size: 30px; text-align: 2px; text-transform: uppercase; letter-spacing: normal;}
+p, li {font-size: 26px; text-align: center;}
+
+</style>
+
+
+</head>
+<body>
+<% include partials/nav.ejs %> //including partial view
+
+<h1> Welcome to the profile of <%= person %> </h1>
+<p> <strong> Age: </strong> <%= data.age %> </p>
+<p> <strong> Job: </strong> <%= data.job %> </p>
+<h2> Hobbies </h2>
+<ul>
+<% data.hobbies.forEach(function(item){ %>
+<li><%= item %></li>
+<% }); %>
+
+</ul>
+
+
+</body>
